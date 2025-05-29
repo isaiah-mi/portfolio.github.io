@@ -39,7 +39,7 @@ const Hero = () => {
           
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up">
             I transform raw data into actionable insights that drive business growth. 
-            With expertise in SQL, Python, and advanced analytics, I help organizations 
+            With expertise in SQL, Python, PowerBI, Tableau, Excel and advanced analytics, I help organizations 
             make data-driven decisions.
           </p>
 
