@@ -114,36 +114,7 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <Card className="shadow-xl border-0">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Send Message
-              </h3>
-              
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name
-                    </label>
-                    <Input 
-                      placeholder="John"
-                      className="border-gray-200 focus:border-data-blue-500 focus:ring-data-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name
-                    </label>
-                    <Input 
-                      placeholder="Doe"
-                      className="border-gray-200 focus:border-data-blue-500 focus:ring-data-blue-500"
-                    />
-                  </div>
-                </div>
+          </div
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
