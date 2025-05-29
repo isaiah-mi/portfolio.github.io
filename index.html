@@ -159,10 +159,10 @@
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-slide-up">
-            <button class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-3 text-lg text-white rounded-md font-medium transition-all duration-200">
+            <button onclick="scrollToProjects()" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-3 text-lg text-white rounded-md font-medium transition-all duration-200 cursor-pointer">
               View My Work
             </button>
-            <button class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg rounded-md font-medium transition-all duration-200">
+            <button onclick="scrollToContact()" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg rounded-md font-medium transition-all duration-200 cursor-pointer">
               Get In Touch
             </button>
           </div>
@@ -243,10 +243,13 @@
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">Sales Dashboard</h3>
               <p class="text-gray-600 mb-4">Interactive dashboard analyzing sales performance across multiple regions</p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Python</span>
                 <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Tableau</span>
               </div>
+              <button onclick="viewProject('sales-dashboard')" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-md font-medium transition-all duration-200 cursor-pointer">
+                View Project
+              </button>
             </div>
           </div>
 
@@ -255,10 +258,13 @@
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">Customer Segmentation</h3>
               <p class="text-gray-600 mb-4">Machine learning model for customer behavior analysis and segmentation</p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Python</span>
                 <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Scikit-learn</span>
               </div>
+              <button onclick="viewProject('customer-segmentation')" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-md font-medium transition-all duration-200 cursor-pointer">
+                View Project
+              </button>
             </div>
           </div>
 
@@ -267,10 +273,13 @@
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 mb-2">Market Analysis</h3>
               <p class="text-gray-600 mb-4">Comprehensive market trend analysis with predictive modeling</p>
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">SQL</span>
                 <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Power BI</span>
               </div>
+              <button onclick="viewProject('market-analysis')" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-md font-medium transition-all duration-200 cursor-pointer">
+                View Project
+              </button>
             </div>
           </div>
         </div>
@@ -512,6 +521,39 @@
           }
         });
       });
+
+      // Hero button functions
+      function scrollToProjects() {
+        document.getElementById('projects').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+
+      function scrollToContact() {
+        document.getElementById('contact').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+
+      // Project view function
+      function viewProject(projectId) {
+        // Show project details or redirect to project page
+        switch(projectId) {
+          case 'sales-dashboard':
+            alert('Sales Dashboard Project: This interactive dashboard analyzes sales performance across multiple regions using Python and Tableau. Key features include real-time KPI tracking, regional comparisons, and predictive analytics.');
+            break;
+          case 'customer-segmentation':
+            alert('Customer Segmentation Project: Advanced clustering analysis using machine learning to identify customer segments. Built with Python and Scikit-learn for marketing optimization.');
+            break;
+          case 'market-analysis':
+            alert('Market Analysis Project: Comprehensive market trend analysis with predictive modeling using SQL and Power BI for strategic business insights.');
+            break;
+          default:
+            alert('Project details coming soon!');
+        }
+      }
 
       // Form submission
       document.querySelector('form').addEventListener('submit', function(e) {
