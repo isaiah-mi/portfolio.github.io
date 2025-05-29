@@ -29,7 +29,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 animate-fade-in">
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-data-blue-600 to-data-purple-600 bg-clip-text text-transparent">
-              Alex Johnson
+              Isaiah Matthew
             </span>
           </h1>
           
