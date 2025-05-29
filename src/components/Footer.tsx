@@ -1,6 +1,4 @@
 
-import { Heart } from 'lucide-react';
-
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -16,14 +14,12 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center space-x-2 text-gray-400">
-            <span>Made with</span>
-            <Heart className="w-4 h-4 text-red-500 fill-current" />
-            <span>by Alex Johnson</span>
+            <span>by Isaiah Matthew </span>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Alex Johnson. All rights reserved.</p>
+          <p>&copy; 2024 Isaiah Matthew. All rights reserved.</p>
         </div>
       </div>
     </footer>
